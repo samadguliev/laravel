@@ -23,4 +23,10 @@ class ContactController extends Controller
         return redirect()->route('home')->with('success', 'Сообщение было добавлено');
     }
 
+    public function allData()
+    {
+        $contact = Contact::all();
+        dd($contact);
+    }
+
 }
