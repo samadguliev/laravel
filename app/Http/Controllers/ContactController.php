@@ -25,8 +25,11 @@ class ContactController extends Controller
 
     public function allData()
     {
-        $contact = Contact::all();
-        dd($contact);
+        $contact = new Contact;
+        return view(
+            'messages',
+            ['data' => $contact->orderBy('id')->get()->all()]
+        );
     }
 
 }
