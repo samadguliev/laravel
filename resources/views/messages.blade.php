@@ -9,7 +9,7 @@
             <h3>{{ $message->subject }}</h3>
             <p>{{ $message->email }}</p>
             <p><small>{{ $message->created_at }}</small></p>
-            <a href="#">
+            <a href="{{ route('contact-data-one', $message->id) }}">
                 <button class="btn btn-warning">
                     Детальная
                 </button>
