@@ -51,3 +51,8 @@ Route::get(
     'ContactController@deleteMessage'
 )->name('contact-delete');
 
+Route::post(
+    '/articles/',
+    'ArticleController@getArticlesByCategory'
+)->middleware('csrf');
+
