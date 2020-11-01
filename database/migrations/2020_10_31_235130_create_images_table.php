@@ -18,7 +18,6 @@ class CreateImagesTable extends Migration
             $table->string('name', 50);
             $table->string('extension', 20);
             $table->string('src', 300);
-            $table->timestamps();
         });
     }
 
