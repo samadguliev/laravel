@@ -17,9 +17,8 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->integer('category_id');
             $table->string('title', 50);
-            $table->text('text');
-            $table->string('img_src', 300);
-            $table->timestamps();
+            $table->text('description');
+            $table->string('image', 300);
         });
     }
 
