@@ -13,6 +13,7 @@ class ArticleController extends Controller
         $categoryId = intval($request->category);
         $articles = $article::where('category_id', $categoryId)
             ->orderBy('id', 'desc')
+            ->limit(5)
             ->get();
         $articlesArray = $articles->toArray();
         if (count($articlesArray)) {
